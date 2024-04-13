@@ -1,0 +1,30 @@
+#version 460
+
+// Local workgroup sizes: use 16x16 thread groups
+layout (local_size_x = 16, local_size_y = 16) in;
+
+// We'll access our texture via an image2D object.  This is setup as a floating point texture where each colour component is represented as a floating point value (rgba32f).
+layout (rgba32f, binding = 0) uniform image2D data;
+
+// Main compute shader
+void main() {
+	vec4 result = vec4(0.0, 0.0, 0.0, 1.0);
+	 
+	if( (gl_GlobalInvocationID.x/20)%2 == 0) 
+	{
+		if( (gl_GlobalInvocationID.y/20)%2 == 1) 
+		{
+			result.r =1.0f;
+		}
+	}
+	else
+	{
+		if( (gl_GlobalInvocationID.y/20)%2 == 0) 
+		{
+			result.r =1.0f;
+		}
+	}
+	
+	// Store the result at image (pixel) coordinate (x, y)
+	imageStore(data, ivec2(gl_GlobalInvocationID.xy), result);
+}

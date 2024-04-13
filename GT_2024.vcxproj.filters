@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{645a1d4c-0938-49f9-a9ad-8f47ec5aa311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComputeShaders">
+      <UniqueIdentifier>{c3f88905-5b52-4f4a-b09b-cad3f80d6bec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{60ed6643-9cd1-421e-a20e-718e5de4e3ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer Headers">
+      <UniqueIdentifier>{b1ba60bf-5d42-49e5-acfd-5bd26fb9d97b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer Source">
+      <UniqueIdentifier>{e0a76bdd-e96c-4444-b382-4c4f7d68e646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Headers">
+      <UniqueIdentifier>{ac5eadee-977f-4a0b-9bbf-00f8c6aa2486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Source">
+      <UniqueIdentifier>{2c92be1c-2d52-400e-be7f-2200aa12d802}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IComputeShader.h">
+      <Filter>ComputeShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputeShaders.h">
+      <Filter>ComputeShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="core.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="cCamera.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cLight.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cMesh.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cShader.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cCubeMap.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cTexture.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cTGAImg.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Game Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cTransform.h">
+      <Filter>Game Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectFactory.h">
+      <Filter>Game Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraFactory.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LightFactory.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="helper.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputeShaderFactory.h">
+      <Filter>ComputeShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckerBoard.hpp">
+      <Filter>ComputeShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cCameraLookAt.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Life.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IComputeShader.cpp">
+      <Filter>ComputeShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="cCamera.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cLight.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cMesh.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cShader.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cCubeMap.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cTGAImg.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Game Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cTransform.cpp">
+      <Filter>Game Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectFactory.cpp">
+      <Filter>Game Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraFactory.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LightFactory.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputeShaderFactory.cpp">
+      <Filter>ComputeShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckerBoard.cpp">
+      <Filter>ComputeShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="cCameraLookAt.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Life.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scene.sdf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\diffuse.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\diffuse.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\flat.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\flat.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\toon.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\toon.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\environment.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\environment.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\flatPrim.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\flatPrim.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\flat2.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\flat2.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\checkerboard.comp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\twist.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\twist.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\life.comp">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
