@@ -94,7 +94,10 @@
     <ClInclude Include="cCameraLookAt.h">
       <Filter>Renderer Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Life.h">
+    <ClInclude Include="life.h">
+      <Filter>Renderer Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.hpp">
       <Filter>Renderer Headers</Filter>
     </ClInclude>
   </ItemGroup>
@@ -156,7 +159,10 @@
     <ClCompile Include="cCameraLookAt.cpp">
       <Filter>Renderer Source</Filter>
     </ClCompile>
-    <ClCompile Include="Life.cpp">
+    <ClCompile Include="life.cpp">
+      <Filter>Renderer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
       <Filter>Renderer Source</Filter>
     </ClCompile>
   </ItemGroup>

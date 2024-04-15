@@ -1,16 +1,16 @@
 #pragma once
 #include "IComputeShader.h"
 
-// Conway's Game of Life shader
+// Conway's Game of life shader
 
-class Life :public IComputeShader
+class life :public IComputeShader
 {
 	GLuint			m_data;
 	int current = 0;
 
 public:
 
-	Life() { m_size = 1024; };
+	life() { m_size = 1024; };
 
 	void GenerateTextures(GLuint _w, GLuint _h);
 

@@ -145,10 +145,11 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectFactory.h" />
     <ClInclude Include="IComputeShader.h" />
-    <ClInclude Include="Life.h" />
+    <ClInclude Include="life.h" />
     <ClInclude Include="LightFactory.h" />
     <ClInclude Include="helper.h" />
     <ClInclude Include="cTGAImg.h" />
+    <ClInclude Include="PerlinNoise.hpp" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
@@ -167,10 +168,11 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectFactory.cpp" />
     <ClCompile Include="IComputeShader.cpp" />
-    <ClCompile Include="Life.cpp" />
+    <ClCompile Include="life.cpp" />
     <ClCompile Include="LightFactory.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="cTGAImg.cpp" />
+    <ClCompile Include="PerlinNoise.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>

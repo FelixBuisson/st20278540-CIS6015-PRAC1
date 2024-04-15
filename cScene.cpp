@@ -51,11 +51,11 @@ void cScene::Update(GLFWwindow* _window)
 
 	//toggle wireframe mode
 	static int prevSpaceState = GLFW_RELEASE;
-	if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS && prevSpaceState != GLFW_PRESS)
+	if (glfwGetKey(_window, GLFW_KEY_F) == GLFW_PRESS && prevSpaceState != GLFW_PRESS)
 	{
 		ToggleWireMode();
 	}
-	prevSpaceState = glfwGetKey(_window, GLFW_KEY_SPACE);
+	prevSpaceState = glfwGetKey(_window, GLFW_KEY_F);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////

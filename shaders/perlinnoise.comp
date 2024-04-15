@@ -1,0 +1,146 @@
+#version 460
+
+// Local workgroup sizes: use 16x16 thread groups
+layout (local_size_x = 16, local_size_y = 16) in;
+
+// We'll access our texture via an image2D object.  This is setup as a floating point texture where each colour component is represented as a floating point value (rgba32f).
+layout (rgba32f, binding = 0) uniform image2D data;
+
+// Noise parameters (comes from the PerlinModel structure in our C++ code)
+layout (std140, binding = 0) uniform PerlinModel {
+
+	uint			N;
+	uint			Nmask;
+	uint			iTable[256];
+	vec2			vTable[256];
+
+} pnModel;
+
+
+// Perlin noise implementation (this code is essentially a copy of the code in the PerlinNoise c++ class)
+
+vec2 getGradient(uint x, uint y) {
+
+	uint p1 = pnModel.iTable[x & pnModel.Nmask];
+	uint p2 = pnModel.iTable[y & pnModel.Nmask];
+
+	return pnModel.vTable[pnModel.iTable[(p1 + p2) & pnModel.Nmask]];
+}
+
+// sigmoidal weighting of gradient coefficient t where 0 <= t <= 1
+float pnoise_smoothstep(float t) {
+
+	// Interpolation with quintic 6t^5 - 15t^4 + 10t^3
+	return t * t * t * (t * (t * 6.0f - 15.0f) + 10.0f);
+}
+
+// derivative of sigmoidal function
+float pnoise_smoothstep_d1(float t) {
+	
+	return 30.0f * t * t * (t * (t - 2.0f) + 1.0f);
+}
+
+// Get actual noise value and return the derivative in the out parameter dn_dxy
+float pnoise(float x, float y, float scale, out vec2 dn_dxy) {
+
+	x *= scale;
+	y *= scale;
+	
+	float x0_ = floor(x);
+	float y0_ = floor(y);
+
+	int x0 = int(x0_);
+	int y0 = int(y0_);
+
+	float u = x - x0_;
+	float v = y - y0_;
+
+	float du_dx = pnoise_smoothstep_d1(u);
+	float dv_dy = pnoise_smoothstep_d1(v);
+
+	/*
+	x0,y0    x1,y0
+	g00      g10
+	 +-------+
+	 |       |
+	 +-------+
+	 g01     g11
+	 x0,y1   x1,y1
+	*/
+  
+	vec2 g00 = getGradient(x0, y0); //ga
+	vec2 g10 = getGradient(x0 + 1, y0); //gb
+	vec2 g01 = getGradient(x0, y0 + 1); //gc
+	vec2 g11 = getGradient(x0 + 1, y0 + 1); //gd
+
+	// dot product of vectors based on uv with gradients
+	// given |g| = 1.0,
+	// uv.g = |uv||g|cos(theta) = |uv|cos(theta) 
+	float a = u * g00.x + v * g00.y;
+	float b = (u - 1.0f) * g10.x + v * g10.y;
+	float c = u * g01.x + (v - 1.0f) * g01.y;
+	float d = (u - 1.0f) * g11.x + (v - 1.0f) * g11.y;
+
+	u = pnoise_smoothstep(u);
+	v = pnoise_smoothstep(v);
+	
+	// refactor bi-linear interpolation
+	float k0 = 1.0f - u - v + u * v;
+	float k1 = u - u * v;
+	float k2 = v - u * v;
+	float k3 = u * v;
+  
+  // Calculate final noise value
+	float actual_noise = a * k0 + b * k1 + c * k2 + d * k3;
+	
+  // Calculate noise derivative
+	dn_dxy.x = g00.x * k0 + g10.x * k1 + g01.x * k2 + g11.x * k3 + du_dx * (b - a + (a - b - c + d) * v);
+	dn_dxy.y = g00.y * k0 + g10.y * k1 + g01.y * k2 + g11.y * k3 + dv_dy * (c - a + (a - b - c + d) * u);
+  
+	return actual_noise;
+}
+
+
+// Main compute shader
+void main() {
+
+	ivec2 size = imageSize(data);
+	
+	float x = float(gl_GlobalInvocationID.x);
+	float y = float(gl_GlobalInvocationID.y);
+	
+	// Domain parameters - configures which region of the noise function to store in the texture
+	// Note: ** As an exercise, move this into a uniform buffer like the other Perlin noise parameters above **
+
+	int extent = 256;
+	float domainStart = 0.0f;
+	float domainEnd = 8.0f;
+	float domainSize = domainEnd - domainStart;
+	float domainStep = domainSize / float(extent);
+	int numOctaves = 4;
+	float heightScale = 0.5f;
+	float u = domainStart + x * domainStep;
+	float v = domainStart + y * domainStep;
+	
+	float pn = 0.0f; // Initialise perlin noise output value to 0
+	float freq = 1.0f;
+	vec2 dnTotal = vec2(0.0f, 0.0f);
+	vec2 dn = vec2(0.0f, 0.0f);
+	
+	// Loop through each frequency and add the scaled perlin noise at each freqency to the final, total noise value
+	for (int f = 0; f < numOctaves; f++, u*=2.0f, v*=2.0f, freq*=2.0f) {
+	
+		// Noise with fractal power spectrum (frequency distribution)
+		pn += pnoise(u, v, 1.0f, dn) * (1.0f / freq);
+		dnTotal += dn * (1.0f / freq);
+	}
+	
+	// Scale and offset the noise accordingly
+	pn = pn * heightScale + 0.5f;
+
+	// Setup the final colour vector (rgb all the same so greyscale for now)
+	vec4 result = vec4(pn, pn, pn, 1.0f);
+	
+	// Store the noise value at image (pixel) coordinate (x, y)
+	imageStore(data, ivec2(gl_GlobalInvocationID.xy), result);
+}
