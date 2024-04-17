@@ -218,8 +218,5 @@
     <None Include="shaders\life.comp">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="shaders\perlinnoise.comp">
-      <Filter>Shaders</Filter>
-    </None>
   </ItemGroup>
 </Project>

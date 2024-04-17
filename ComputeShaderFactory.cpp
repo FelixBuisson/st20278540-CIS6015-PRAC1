@@ -9,8 +9,8 @@ IComputeShader* ComputeShaderFactory::makeNewCS(std::string _type)
 	{
 		return new CheckerBoard();
 	}
-	if (_type == "shaders/Life")
-		return new Life();
+	if (_type == "shaders/life")
+		return new life();
 	if (_type == "shaders/PerlinNoise")
 		return new PerlinNoise();
 	else

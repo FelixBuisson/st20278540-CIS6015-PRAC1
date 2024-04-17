@@ -147,20 +147,19 @@ MESH: sky
 }
 MESH: FELIX
 {
-	FILENAME:	Character_NO_ANIMATION_2.obj		
+	FILENAME:	Character_NO_ANIMATION.obj		
 	SHADER:		twist
 }
 MESH: FELIX_PLAYER
 {
 	FILENAME:	Character_NO_ANIMATION.obj		
-	SHADER:		diffuse
+	SHADER:		flatPrim
 }
 MESH: CUBE_FELIX
 {
 	FILENAME:	cube_highpoly.obj
-	SHADER:		toon
+	SHADER:		environment
 }
-
 MESH: CUBE_FELIX_2
 {
 	FILENAME:	cube_highpoly.obj
@@ -168,8 +167,8 @@ MESH: CUBE_FELIX_2
 }
 MESH: FELIX2
 {
-	FILENAME:	Character_NO_ANIMATION_2.obj		
-	SHADER:		flatPrim
+	FILENAME:	Character_NO_ANIMATION.obj		
+	SHADER:		toon
 }
 
 GAME_OBJECT_COUNT: 6
@@ -199,7 +198,7 @@ GAME_OBJECT: CUBE_FELIX
 	MESH:		CUBE_FELIX
 	POS:		-2.0 2.0 -2.0
 	ROT:		0.0 0.0 0.0
-	ROT_INCR:	0.0 0.0 0.0
+	ROT_INCR:	0.0 -0.3 0.0
 	SCALE:		0.5 0.5 0.5
 	VEL:		0.0 0.0 0.0
 }
@@ -229,7 +228,7 @@ GAME_OBJECT: FELIX2
 	MESH:		FELIX2
 	POS:		2.0 2.0 -2.0
 	ROT:		0.0 0.0 0.0
-	ROT_INCR:	0.9 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0
 	SCALE:		0.25 0.1 0.1
 	VEL:		0.0 0.0 0.0
 }
@@ -243,5 +242,5 @@ SHADER:	shaders/toon				VERT_SHDR	FRAG_SHDR
 SHADER:	shaders/environment			VERT_SHDR	FRAG_SHDR
 SHADER: shaders/checkerboard		COMP_SHDR
 SHADER: shaders/twist				VERT_SHDR	FRAG_SHDR
-SHADER: shaders/Life				COMP_SHDR
+SHADER: shaders/life				COMP_SHDR
 SHADER: shaders/PerlinNoise			COMP_SHDR
