@@ -1,14 +1,14 @@
 #include "core.h"
 #include <random>
 #include <iostream>
-#include "life.h"
+#include "Life.h"
 
 using namespace std;
 
-void life::GenerateTextures(GLuint _w, GLuint _h) {
+void Life::GenerateTextures(GLuint _w, GLuint _h) {
 
 	m_loops = 2;
-	m_name = "life";
+	m_name = "Life";
 	m_w = _w;
 	m_h = _h;
 	m_textures = new GLuint[2];
@@ -43,7 +43,7 @@ void life::GenerateTextures(GLuint _w, GLuint _h) {
 	delete[] data;
 }
 
-void life::SimBody()
+void Life::SimBody()
 {
 	if (((float)rand() / (float)RAND_MAX) < 0.001)
 	{
