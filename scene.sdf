@@ -139,16 +139,11 @@ PRIM: cone
 	FILE:		cone.obj
 }
 
-MESH_COUNT: 8
+MESH_COUNT: 6
 MESH: sky
 {
 	FILENAME:	skybox.obj		
 	SHADER:		flat
-}
-MESH: terrain
-{
-	FILENAME:	BeachRockFree_tris.obj		
-	SHADER:		diffuse
 }
 MESH: FELIX
 {
@@ -176,13 +171,8 @@ MESH: FELIX2
 	FILENAME:	Character_NO_ANIMATION_2.obj		
 	SHADER:		flatPrim
 }
-MESH: WALL1
-{
-	FILENAME:	flat.obj		
-	SHADER:		environment
-}
 
-GAME_OBJECT_COUNT: 8
+GAME_OBJECT_COUNT: 6
 GAME_OBJECT: sky
 {
 	TYPE:		GAME_OBJECT
@@ -191,16 +181,6 @@ GAME_OBJECT: sky
 	ROT:		0.0 0.0 0.0
 	ROT_INCR:	0.0 0.0 0.0 
 	SCALE:		1.0 1.0 1.0
-	VEL:		0.0 0.0 0.0
-}
-GAME_OBJECT: terrain
-{
-	TYPE:		GAME_OBJECT
-	MESH:		terrain
-	POS:		0.0 -7.0 0.0
-	ROT:		0.0 0.0 0.0
-	ROT_INCR:	0.0 0.0 0.0 
-	SCALE:		10.0 5.0 10.0
 	VEL:		0.0 0.0 0.0
 }
 GAME_OBJECT: FELIX_PLAYER
@@ -251,16 +231,6 @@ GAME_OBJECT: FELIX2
 	ROT:		0.0 0.0 0.0
 	ROT_INCR:	0.9 0.0 0.0
 	SCALE:		0.25 0.1 0.1
-	VEL:		0.0 0.0 0.0
-}
-GAME_OBJECT: WALL1
-{
-	TYPE:		GAME_OBJECT
-	MESH:		WALL1
-	POS:		0.0 0.0 0.0
-	ROT:		0.0 0.0 0.0
-	ROT_INCR:	0.0 0.0 0.0 
-	SCALE:		1.0 1.0 1.0
 	VEL:		0.0 0.0 0.0
 }
 

@@ -1,4 +1,4 @@
 #pragma once
 #include "CheckerBoard.hpp"
-#include "life.h"
+#include "Life.h"
 #include "PerlinNoise.hpp"

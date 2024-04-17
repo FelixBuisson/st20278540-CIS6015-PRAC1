@@ -42,13 +42,13 @@ void Player::Tick(GLFWwindow* _window)
 	updatedRotation = vec3(movedMousePosY, -movedMousePosX, 0.0f);
 
 	if (glfwGetKey(_window, GLFW_KEY_W) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_W) == GLFW_REPEAT)
-		updatedPosition.z -= 0.01f;
-	if (glfwGetKey(_window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_A) == GLFW_REPEAT)
-		updatedPosition.x -= 0.01f;
-	if (glfwGetKey(_window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_S) == GLFW_REPEAT)
 		updatedPosition.z += 0.01f;
-	if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_D) == GLFW_REPEAT)
+	if (glfwGetKey(_window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_A) == GLFW_REPEAT)
 		updatedPosition.x += 0.01f;
+	if (glfwGetKey(_window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_S) == GLFW_REPEAT)
+		updatedPosition.z -= 0.01f;
+	if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_D) == GLFW_REPEAT)
+		updatedPosition.x -= 0.01f;
 	if (glfwGetKey(_window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_LEFT_SHIFT) == GLFW_REPEAT)
 		updatedPosition.y -= 0.01f;
 	if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS || glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_REPEAT)

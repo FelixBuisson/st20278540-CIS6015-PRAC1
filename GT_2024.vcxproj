@@ -189,6 +189,7 @@
     <None Include="shaders\flatPrim.fs" />
     <None Include="shaders\flatPrim.vs" />
     <None Include="shaders\life.comp" />
+    <None Include="shaders\perlinnoise.comp" />
     <None Include="shaders\toon.fs" />
     <None Include="shaders\toon.vs" />
     <None Include="shaders\twist.fs" />
