@@ -1,0 +1,321 @@
+CAMERA_COUNT:	6
+CAMERA: view1
+{
+	TYPE:	CAMERA
+	FOV:	45.0 
+	NEAR:	0.5
+	FAR:	100.0
+	POS:	0.0 6.0 9.0
+	LOOK:	0.0 0.0 0.0
+	PRIM:		cone
+	PRIMSCALE:	0.1
+}
+CAMERA: FELIX_LOOKAT
+{
+	TYPE:	CAMERALOOKAT
+	GAMEOBJECT:	FELIX_PLAYER
+	FOV:	45.0 
+	NEAR:	0.5
+	FAR:	100.0
+	POS:	0.0 6.0 9.0
+	LOOK:	0.0 0.0 0.0
+	PRIM:		cone
+	PRIMSCALE:	0.1
+}
+CAMERA: Felix
+{
+	TYPE:	CAMERA
+	FOV:	45.0 
+	NEAR:	0.5
+	FAR:	100.0
+	POS:	-9.0 9.0 -9.0
+	LOOK:	0.0 0.0 0.0
+	PRIM:		cone
+	PRIMSCALE:	0.1
+}
+CAMERA: view2
+{
+	TYPE:	CAMERA
+	FOV:	45.0 
+	NEAR:	0.5
+	FAR:	100.0
+	POS:	0.0 6.0 -9.0
+	LOOK:	0.0 0.0 0.0
+	PRIM:		cone
+	PRIMSCALE:	0.1
+}
+CAMERA: view3
+{
+	TYPE:	CAMERA
+	FOV:	45.0 
+	NEAR:	0.5
+	FAR:	100.0
+	POS:	9.0 6.0 0.0
+	LOOK:	0.0 0.0 0.0
+	PRIM:		cone
+	PRIMSCALE:	0.1
+}
+CAMERA: view4
+{
+	TYPE:	CAMERA
+	FOV:	45.0 
+	NEAR:	0.5
+	FAR:	100.0
+	POS:	-9.0 6.0 0.0
+	LOOK:	0.0 0.0 0.0
+	PRIM:		cone
+	PRIMSCALE:	0.1
+}
+
+LIGHT_COUNT: 5
+LIGHT: lightFelix
+{
+	TYPE:		LIGHT
+	POS:		0.0 1.0 0.0
+	COL:		1.0 1.0 1.0
+	ATT:		1.0 0.5 0.2
+	AMB:		0.1 0.1 0.1
+	PRIM:		cube
+	PRIMSCALE:	0.1
+}
+LIGHT: light
+{
+	TYPE:		LIGHT
+	POS:		2.0 3.0 -2.0
+	COL:		0.5 0.0 1.0
+	ATT:		1.0 0.5 0.2
+	AMB:		0.1 0.1 0.1
+	PRIM:		cube
+	PRIMSCALE:	0.1
+}
+LIGHT: bluelight
+{
+	TYPE:		LIGHT
+	POS:		-2.0 2.0 -2.0
+	COL:		0.0 0.0 1.0
+	ATT:		1.0 0.5 0.2
+	AMB:		0.0 0.0 0.1
+	PRIM:		cube
+	PRIMSCALE:	0.1
+}
+LIGHT: redlight
+{
+	TYPE:		LIGHT
+	POS:		-2.0 1.0 2.0
+	COL:		1.0 0.0 0.0
+	ATT:		1.0 0.5 0.2
+	AMB:		0.1 0.0 0.0
+	PRIM:		cube
+	PRIMSCALE:	0.1
+}
+LIGHT: greenlight
+{
+	TYPE:		LIGHT
+	POS:		2.0 0.0 2.0
+	COL:		0.0 1.0 0.0
+	ATT:		1.0 0.5 0.2
+	AMB:		0.0 0.1 0.0
+	PRIM:		cube
+	PRIMSCALE:	0.1
+}
+
+CUBE_MAPS: 1
+{
+	RIGHT:	right.tga
+	LEFT:	left.tga
+	TOP:	top.tga
+	BASE:	base.tga
+	FRONT:	front.tga
+	BACK:	back.tga
+}
+
+PRIM_COUNT: 2
+PRIM: cube
+{
+	FILE:		cube.obj
+}
+PRIM: cone
+{
+	FILE:		cone.obj
+}
+
+MESH_COUNT: 11
+MESH: sky
+{
+	FILENAME:	skybox.obj		
+	SHADER:		flat
+}
+MESH: FELIX
+{
+	FILENAME:	Character_NO_ANIMATION.obj		
+	SHADER:		twist
+}
+MESH: FELIX_PLAYER
+{
+	FILENAME:	Character_NO_ANIMATION.obj		
+	SHADER:		toon
+}
+MESH: CUBE_FELIX
+{
+	FILENAME:	cube_highpoly.obj
+	SHADER:		diffuse
+}
+MESH: CUBE_FELIX_2
+{
+	FILENAME:	cube_highpoly.obj
+	SHADER:		twist
+}
+MESH: FELIX2
+{
+	FILENAME:	Character_NO_ANIMATION.obj		
+	SHADER:		environment
+}
+MESH: PLANE0
+{
+	FILENAME:	plane.obj		
+	SHADER:		flat
+}
+MESH: PLANE1
+{
+	FILENAME:	plane.obj		
+	SHADER:		flat2
+}
+MESH: PLANE2
+{
+	FILENAME:	plane.obj		
+	SHADER:		flat2
+}
+MESH: PLANE3
+{
+	FILENAME:	plane.obj		
+	SHADER:		flat2
+}
+MESH: PLANE4
+{
+	FILENAME:	plane.obj		
+	SHADER:		flat2
+}
+
+GAME_OBJECT_COUNT: 11
+GAME_OBJECT: sky
+{
+	TYPE:		GAME_OBJECT
+	MESH:		sky
+	POS:		0.0 0.0 0.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		1.0 1.0 1.0
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: FELIX_PLAYER
+{
+	TYPE:		PLAYER
+	MESH:		FELIX_PLAYER
+	POS:		0.0 0.0 -2.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		0.05 0.05 0.05
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: CUBE_FELIX
+{
+	TYPE:		GAME_OBJECT
+	MESH:		CUBE_FELIX
+	POS:		-2.0 0.0 -2.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0
+	SCALE:		0.5 0.5 0.5
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: FELIX
+{
+	TYPE:		GAME_OBJECT
+	MESH:		FELIX
+	POS:		2.0 0.0 2.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0
+	SCALE:		0.1 0.1 0.1
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: CUBE_FELIX_2
+{
+	TYPE:		GAME_OBJECT
+	MESH:		CUBE_FELIX_2
+	POS:		-2.0 2.0 2.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 9.0 0.0
+	SCALE:		0.5 0.5 0.5
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: FELIX2
+{
+	TYPE:		GAME_OBJECT
+	MESH:		FELIX2
+	POS:		2.0 0.0 -2.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 -0.9 0.0
+	SCALE:		0.25 0.1 0.1
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: PLANE0
+{
+	TYPE:		GAME_OBJECT
+	MESH:		PLANE0
+	POS:		0.0 0.0 0.0
+	ROT:		90.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		9.0 9.0 9.0
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: PLANE1
+{
+	TYPE:		GAME_OBJECT
+	MESH:		PLANE1
+	POS:		9.0 0.0 0.0
+	ROT:		0.0 90.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		9.0 9.0 9.0
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: PLANE2
+{
+	TYPE:		GAME_OBJECT
+	MESH:		PLANE2
+	POS:		-9.0 0.0 0.0
+	ROT:		0.0 90.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		9.0 9.0 9.0
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: PLANE3
+{
+	TYPE:		GAME_OBJECT
+	MESH:		PLANE3
+	POS:		0.0 0.0 9.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		9.0 9.0 9.0
+	VEL:		0.0 0.0 0.0
+}
+GAME_OBJECT: PLANE4
+{
+	TYPE:		GAME_OBJECT
+	MESH:		PLANE4
+	POS:		0.0 0.0 -9.0
+	ROT:		0.0 0.0 0.0
+	ROT_INCR:	0.0 0.0 0.0 
+	SCALE:		9.0 9.0 9.0
+	VEL:		0.0 0.0 0.0
+}
+
+SHADER_COUNT: 10
+SHADER:	shaders/flat				VERT_SHDR	FRAG_SHDR
+SHADER:	shaders/flat2				VERT_SHDR	FRAG_SHDR
+SHADER: shaders/flatPrim			VERT_SHDR	FRAG_SHDR
+SHADER:	shaders/diffuse				VERT_SHDR	FRAG_SHDR
+SHADER:	shaders/toon				VERT_SHDR	FRAG_SHDR
+SHADER:	shaders/environment			VERT_SHDR	FRAG_SHDR
+SHADER: shaders/checkerboard		COMP_SHDR
+SHADER: shaders/twist				VERT_SHDR	FRAG_SHDR
+SHADER: shaders/Life				COMP_SHDR
+SHADER: shaders/PerlinNoise			COMP_SHDR

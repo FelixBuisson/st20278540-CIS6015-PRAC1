@@ -1,0 +1,55 @@
+﻿  CameraFactory.cpp
+  CheckerBoard.cpp
+  ComputeShaderFactory.cpp
+  Game.cpp
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\Game.cpp(47,9): warning C4129: 'G' : caractère de séquence d'échappement non reconnu
+  GameObject.cpp
+  GameObjectFactory.cpp
+  IComputeShader.cpp
+  LightFactory.cpp
+  PerlinNoise.cpp
+  Player.cpp
+  cCamera.cpp
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cCamera.cpp(145,55): warning C4244: 'argument' : conversion de 'float' en 'GLsizei', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cCamera.cpp(145,41): warning C4244: 'argument' : conversion de 'float' en 'GLsizei', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cCamera.cpp(155,75): warning C4244: 'argument' : conversion de 'float' en 'GLsizei', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cCamera.cpp(155,61): warning C4244: 'argument' : conversion de 'float' en 'GLsizei', perte possible de données
+  cCameraLookAt.cpp
+  cCubeMap.cpp
+  cLight.cpp
+  cMesh.cpp
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cMesh.cpp(611,7): warning C4101: 'meshName' : variable locale non référencée
+  cScene.cpp
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(66,12): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(67,13): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(285,9): warning C4129: 'C' : caractère de séquence d'échappement non reconnu
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(308,11): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(320,9): warning C4129: 'P' : caractère de séquence d'échappement non reconnu
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(334,9): warning C4129: 'M' : caractère de séquence d'échappement non reconnu
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(354,9): warning C4129: 'S' : caractère de séquence d'échappement non reconnu
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(212,8): warning C4101: 'value' : variable locale non référencée
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(428,34): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cScene.cpp(466,32): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+  cShader.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY' : redéfinition de macro
+  (compiler le fichier source 'cShader.cpp')
+  C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\GLFW\glfw3.h(104,1):
+  voir la définition précédente de 'APIENTRY'
+  
+  cTGAImg.cpp
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\cTGAImg.cpp(121,20): warning C4244: '=' : conversion de 'std::streamoff' en 'unsigned long', perte possible de données
+  cTransform.cpp
+  life.cpp
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\life.cpp(17,20): warning C4018: '<' : incompatibilité signed/unsigned
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\life.cpp(19,21): warning C4018: '<' : incompatibilité signed/unsigned
+  Génération de code en cours...
+  Compilation en cours...
+  main.cpp
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\main.cpp(94,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\main.cpp(128,25): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\main.cpp(128,14): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+  Génération de code en cours...
+glew32s.lib(glew.obj) : warning LNK4099: PDB '' n'a pu être trouvé avec 'glew32s.lib(glew.obj)' ou sur '' ; l'objet sera lié sans informations de débogage
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'MSVCRT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'LIBCMT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+  GT_2024.vcxproj -> C:\Users\Phaillyks\Documents\GitHub\st20278540-CIS6015-PRAC1\Virtual World\x64\Debug\GT_2024.exe
